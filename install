@@ -7,15 +7,17 @@ echo "dotfiles installation script; BASEDIR is $BASEDIR"
 # shell
 ln -s ${BASEDIR}/.sh ~/.sh
 ln -s ${BASEDIR}/.shell ~/.shell
-ln -s ${BASEDIR}/.bash ~/.bash
-ln -s ${BASEDIR}/.bashrc ~/.bashrc
-ln -s ${BASEDIR}/.bash_profile ~/.bash_profile
-ln -s ${BASEDIR}/.bash_logout ~/.bash_logout
 ln -s ${BASEDIR}/.profile ~/.profile
+
+#bash
+ln -s ${BASEDIR}/.bash ~/.bash
+ln -s ${BASEDIR}/.bash/rc ~/.bashrc
+ln -s ${BASEDIR}/.bash/profile ~/.bash_profile
+ln -s ${BASEDIR}/.bash/login ~/.bash_login
+ln -s ${BASEDIR}/.bash/logout ~/.bash_logout
 
 # zsh
 ln -s ${BASEDIR}/.zsh/env ~/.zshenv
 ln -s ${BASEDIR}/.zsh/interactive ~/.zshrc
 ln -s ${BASEDIR}/.zsh/login ~/.zlogin
 ln -s ${BASEDIR}/.zsh/logout ~/.zlogout
-
