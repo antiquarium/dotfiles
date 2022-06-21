@@ -12,7 +12,10 @@ ln -s ${BASEDIR}/.bashrc ~/.bashrc
 ln -s ${BASEDIR}/.bash_profile ~/.bash_profile
 ln -s ${BASEDIR}/.bash_logout ~/.bash_logout
 ln -s ${BASEDIR}/.profile ~/.profile
-ln -s ${BASEDIR}/.zsh ~/.zsh
-ln -s ${BASEDIR}/.zshrc ~/.zshrc
-ln -s ${BASEDIR}/.zshenv ~/.zshenv
+
+# zsh
+ln -s ${BASEDIR}/.zsh/env ~/.zshenv
+ln -s ${BASEDIR}/.zsh/interactive ~/.zshrc
+ln -s ${BASEDIR}/.zsh/login ~/.zlogin
+ln -s ${BASEDIR}/.zsh/logout ~/.zlogout
 
