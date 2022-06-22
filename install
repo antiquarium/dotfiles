@@ -1,23 +1,26 @@
 #!/bin/bash
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTDIR=~/.dotfiles
 
-echo "dotfiles installation script; BASEDIR is $BASEDIR"
+echo "BASEDIR is $BASEDIR; DOTDIR is $DOTDIR"
+
+ln -s -i ${BASEDIR} ${DOTDIR}
 
 # shell
-ln -s -i ${BASEDIR}/.sh ~/.sh
-ln -s -i ${BASEDIR}/.shell ~/.shell
-ln -s -i ${BASEDIR}/.profile ~/.profile
+ln -s -i ${DOTDIR}/.sh ~/.sh
+ln -s -i ${DOTDIR}/.shell ~/.shell
+ln -s -i ${DOTDIR}/.profile ~/.profile
 
 #bash
-ln -s -i ${BASEDIR}/.bash ~/.bash
-ln -s -i ${BASEDIR}/.bash/rc ~/.bashrc
-ln -s -i ${BASEDIR}/.bash/profile ~/.bash_profile
-ln -s -i ${BASEDIR}/.bash/login ~/.bash_login
-ln -s -i ${BASEDIR}/.bash/logout ~/.bash_logout
+ln -s -i ${DOTDIR}/.bash ~/.bash
+ln -s -i ${DOTDIR}/.bash/rc ~/.bashrc
+ln -s -i ${DOTDIR}/.bash/profile ~/.bash_profile
+ln -s -i ${DOTDIR}/.bash/login ~/.bash_login
+ln -s -i ${DOTDIR}/.bash/logout ~/.bash_logout
 
 # zsh
-ln -s -i ${BASEDIR}/.zsh/env ~/.zshenv
-ln -s -i ${BASEDIR}/.zsh/interactive ~/.zshrc
-ln -s -i ${BASEDIR}/.zsh/login ~/.zlogin
-ln -s -i ${BASEDIR}/.zsh/logout ~/.zlogout
+ln -s -i ${DOTDIR}/.zsh/env ~/.zshenv
+ln -s -i ${DOTDIR}/.zsh/interactive ~/.zshrc
+ln -s -i ${DOTDIR}/.zsh/login ~/.zlogin
+ln -s -i ${DOTDIR}/.zsh/logout ~/.zlogout
