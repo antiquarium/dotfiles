@@ -1,3 +1,4 @@
+pathappend ~/.dotfiles/bin PATH
 # put your aliases here
 
 # if in a terminal
