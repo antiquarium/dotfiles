@@ -1,5 +1,6 @@
 pathappend ~/.dotfiles/bin PATH
-# put your aliases here
+
+. ~/.shell/aliases
 
 # if in a terminal
 if [ -t 0 ]; then

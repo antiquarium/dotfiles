@@ -1,0 +1,37 @@
+# shell
+alias ll="ls -l"
+alias la="ll -A"
+
+# git
+alias bn="git branch | grep '*' | tr -d '* '"
+alias gmb='git merge-base $(bn)'
+alias gd="git diff"
+alias gsh="git show"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gcm="gc -m"
+alias gcane="git commit --amend --no-edit"
+alias gp="git push"
+alias gpu='git push -u origin $(bn)'
+alias gpl="git pull"
+alias gpr="gpl --rebase"
+alias gch="git checkout"
+alias gf="git fetch"
+alias gr="git restore"
+alias grs="git restore --staged"
+alias glo="git log --oneline"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
+alias gla="gl --all"
+
+# npm
+alias lint="npm run lint"
+alias fix="npm run lint-fix"
+alias tst="npm run test"
+
+# yarn
+alias ya="yarn add"
+alias yr="yarn remove"
+alias yt="yarn test"
+alias yb="yarn build"
+alias ytcc="npx jest --clearCache && yt"
