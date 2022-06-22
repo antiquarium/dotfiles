@@ -8,19 +8,19 @@ echo "BASEDIR is $BASEDIR; DOTDIR is $DOTDIR"
 ln -s -i ${BASEDIR} ${DOTDIR}
 
 # shell
-ln -s -i ${DOTDIR}/.sh ~/.sh
-ln -s -i ${DOTDIR}/.shell ~/.shell
+ln -s -i ${DOTDIR}/sh ~/.sh
+ln -s -i ${DOTDIR}/shell ~/.shell
 ln -s -i ${DOTDIR}/.profile ~/.profile
 
 #bash
-ln -s -i ${DOTDIR}/.bash ~/.bash
-ln -s -i ${DOTDIR}/.bash/rc ~/.bashrc
-ln -s -i ${DOTDIR}/.bash/profile ~/.bash_profile
-ln -s -i ${DOTDIR}/.bash/login ~/.bash_login
-ln -s -i ${DOTDIR}/.bash/logout ~/.bash_logout
+ln -s -i ${DOTDIR}/bash ~/.bash
+ln -s -i ${DOTDIR}/bash/rc ~/.bashrc
+ln -s -i ${DOTDIR}/bash/profile ~/.bash_profile
+ln -s -i ${DOTDIR}/bash/login ~/.bash_login
+ln -s -i ${DOTDIR}/bash/logout ~/.bash_logout
 
 # zsh
-ln -s -i ${DOTDIR}/.zsh/env ~/.zshenv
-ln -s -i ${DOTDIR}/.zsh/interactive ~/.zshrc
-ln -s -i ${DOTDIR}/.zsh/login ~/.zlogin
-ln -s -i ${DOTDIR}/.zsh/logout ~/.zlogout
+ln -s -i ${DOTDIR}/zsh/env ~/.zshenv
+ln -s -i ${DOTDIR}/zsh/interactive ~/.zshrc
+ln -s -i ${DOTDIR}/zsh/login ~/.zlogin
+ln -s -i ${DOTDIR}/zsh/logout ~/.zlogout
