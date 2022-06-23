@@ -5,22 +5,28 @@ DOTDIR=~/.dotfiles
 
 echo "BASEDIR is $BASEDIR; DOTDIR is $DOTDIR"
 
-ln -s -i ${BASEDIR} ${DOTDIR}
+function link_to() {
+    ln -sin ${DOTDIR}/$1 $2
+}
+
+ln -sin ${BASEDIR} ${DOTDIR}
 
 # shell
-ln -s -i ${DOTDIR}/sh ~/.sh
-ln -s -i ${DOTDIR}/shell ~/.shell
-ln -s -i ${DOTDIR}/.profile ~/.profile
+link_to sh ~/.sh
+link_to shell ~/.shell
+link_to .profile ~/.profile
 
 #bash
-ln -s -i ${DOTDIR}/bash ~/.bash
-ln -s -i ${DOTDIR}/bash/rc ~/.bashrc
-ln -s -i ${DOTDIR}/bash/profile ~/.bash_profile
-ln -s -i ${DOTDIR}/bash/login ~/.bash_login
-ln -s -i ${DOTDIR}/bash/logout ~/.bash_logout
+link_to bash ~/.bash
+link_to bash/rc ~/.bashrc
+link_to bash/profile ~/.bash_profile
+link_to bash/login ~/.bash_login
+link_to bash/logout ~/.bash_logout
 
 # zsh
-ln -s -i ${DOTDIR}/zsh/env ~/.zshenv
-ln -s -i ${DOTDIR}/zsh/interactive ~/.zshrc
-ln -s -i ${DOTDIR}/zsh/login ~/.zlogin
-ln -s -i ${DOTDIR}/zsh/logout ~/.zlogout
+link_to zsh/env ~/.zshenv
+link_to zsh/interactive ~/.zshrc
+link_to zsh/login ~/.zlogin
+link_to zsh/logout ~/.zlogout
+
+unset link_to
