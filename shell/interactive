@@ -1,4 +1,3 @@
-
 . ~/.shell/aliases
 
 # if in a terminal
@@ -7,7 +6,14 @@ if [ -t 0 ]; then
     mesg n
 fi
 
-[ -s $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+# $ZSH and $ZSH_THEME has to be declared here in order for oh-my-zsh to load properly
+# without a need to source .zshrc manually each time. Other env vars are placed in ./login, 
+# and in case of zsh, they will be set when .zlogin is sourced - but it's sourced AFTER .zshrc
+# (which references this file)
+export ZSH=~/.oh-my-zsh
+ZSH_THEME="amuse"
+
+ssource $ZSH/oh-my-zsh.sh
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
