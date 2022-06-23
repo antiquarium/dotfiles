@@ -29,4 +29,7 @@ link_to zsh/interactive ~/.zshrc
 link_to zsh/login ~/.zlogin
 link_to zsh/logout ~/.zlogout
 
+# git
+link_to .gitconfig ~/.gitconfig
+
 unset link_to
