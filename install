@@ -32,4 +32,7 @@ link_to zsh/logout ~/.zlogout
 # git
 link_to .gitconfig ~/.gitconfig
 
+# tmux
+link_to .tmux.conf ~/.tmux.conf
+
 unset link_to
