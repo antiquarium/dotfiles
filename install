@@ -35,4 +35,8 @@ link_to .gitconfig ~/.gitconfig
 # tmux
 link_to .tmux.conf ~/.tmux.conf
 
+# vim
+link_to .vimrc ~/.vimrc
+# run :PlugInstall from within vim
+
 unset link_to
