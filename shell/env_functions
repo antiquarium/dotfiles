@@ -51,3 +51,7 @@ ssource () {
         . "$1"
     fi
 }
+
+uses_zsh () {
+    [[ $0 =~ zsh$ ]]
+}

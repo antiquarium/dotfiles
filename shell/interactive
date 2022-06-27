@@ -13,7 +13,7 @@ fi
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="amuse"
 
-ssource $ZSH/oh-my-zsh.sh
+uses_zsh && ssource $ZSH/oh-my-zsh.sh
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
