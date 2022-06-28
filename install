@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASEDIR="$(cd "$(dirname -- "$0")" && pwd)"
 DOTDIR=~/.dotfiles
 
 echo "BASEDIR is $BASEDIR; DOTDIR is $DOTDIR"
@@ -16,7 +16,7 @@ link_to sh ~/.sh
 link_to shell ~/.shell
 link_to .profile ~/.profile
 
-#bash
+# bash
 link_to bash ~/.bash
 link_to bash/rc ~/.bashrc
 link_to bash/profile ~/.bash_profile
