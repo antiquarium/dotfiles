@@ -58,6 +58,28 @@ set noerrorbells visualbell t_vb=
 " Enable mouse support. 
 set mouse+=a
 
+" Wait 500ms for a subsequent key in a sequence
+set timeoutlen=500
+
+" Automatically insert pairs
+inoremap { {}<Esc>ha
+inoremap } {  }<Esc>hha
+inoremap ( ()<Esc>ha
+inoremap ) (  )<Esc>hha
+inoremap [ []<Esc>ha
+inoremap ] [  ]<Esc>hha
+inoremap <> <><Esc>ha
+inoremap " ""<Esc>ha
+" Single ' is an apostrophe in regular text
+inoremap '' ''<Esc>ha 
+inoremap ` ``<Esc>ha
+
+" Insert blank line between braces (`smartindent` handles indentation)
+inoremap {<CR> {}<Esc>ha<CR><Esc>O
+inoremap (<CR> ()<Esc>ha<CR><Esc>O
+inoremap [<CR> []<Esc>ha<CR><Esc>O
+inoremap <<CR> <><Esc>ha<CR><Esc>O
+
 " Automatically install plug.vim if it doesn't exist locally
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
