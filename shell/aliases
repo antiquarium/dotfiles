@@ -25,9 +25,10 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s 
 alias gla="gl --all"
 
 # npm
-alias lint="npm run lint"
-alias fix="npm run lint-fix"
-alias tst="npm run test"
+alias nr="npm run"
+alias lint="nr lint"
+alias fix="nr lint-fix"
+alias tst="nr test"
 
 # yarn
 alias ya="yarn add"
