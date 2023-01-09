@@ -74,7 +74,6 @@ plugins=()
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export NVM_DIR="$HOME/.nvm"
 # Personal information
 
 # Preferred programs
