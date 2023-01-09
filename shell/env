@@ -9,6 +9,9 @@ export BASH_ENV=~/.bash/env
 
 . ~/.shell/env_functions
 
+# load aliases for non-interactive shells, i.e. Yarn script runner
+. ~/.shell/aliases
+
 umask 0077
 
 ssource ~/.shell/env_local
