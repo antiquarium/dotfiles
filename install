@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+# shebang points to bash for improved portability - change it ad hoc depending
+# on the OS; the reason for this change was WSL Ubuntu - its default /bin/sh
+# points to Dash, which is so bare that it doesn't support function's syntax
 
 BASEDIR="$(cd "$(dirname -- "$0")" && pwd)"
 DOTDIR=~/.dotfiles
