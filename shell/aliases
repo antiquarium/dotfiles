@@ -3,26 +3,52 @@ alias ll="ls -l"
 alias la="ll -A"
 
 # git
-alias bn="git branch | grep '*' | tr -d '* '"
+alias gb="git branch"
+alias bn="gb | grep '*' | tr -d '* '"
 alias gmb='git merge-base $(bn)'
 alias gd="git diff"
 alias gsh="git show"
 alias gs="git status"
 alias ga="git add"
+
 alias gc="git commit"
 alias gcm="gc -m"
+alias gca="gc --amend"
 alias gcane="git commit --amend --no-edit"
+
 alias gp="git push"
 alias gpu='git push -u origin $(bn)'
+alias gpf="gp --force-with-lease"
+
 alias gpl="git pull"
 alias gpr="gpl --rebase"
+
+alias gr="git rebase"
+alias gro="gr --onto"
+alias groa="gr --autosquash --onto"
+alias gri="gr -i"
+alias grin="gr --autosquash -i"
+alias gra="gr --abort"
+alias grc="gr --continue"
+
+alias gm="git merge"
+alias gma="gm --abort"
+alias gmc="gm --continue"
+
 alias gch="git checkout"
+alias gsw="git switch"
+alias gswc="gsw -c"
+
 alias gf="git fetch"
-alias gr="git restore"
-alias grs="git restore --staged"
+
 alias glo="git log --oneline"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
 alias gla="gl --all"
+
+alias gst="git stash"
+alias gstu="gst --include-untracked"
+alias gstk="gst --keep-index"
+alias gstuk="gst --include-untracked --keep-index"
 
 # npm
 alias nr="npm run"
