@@ -2,49 +2,57 @@
 alias ll="ls -l"
 alias la="ll -A"
 
-# git
-alias gb="git branch"
-alias bn="gb | grep '*' | tr -d '* '"
-alias gmb='git merge-base $(bn)'
-alias gd="git diff"
-alias gsh="git show"
+# git - basic workflow
 alias gs="git status"
 alias ga="git add"
+alias gf="git fetch"
+alias gd="git diff"
+alias gsh="git show"
 
+# git - committing
 alias gc="git commit"
 alias gcm="gc -m"
 alias gca="gc --amend"
 alias gcane="git commit --amend --no-edit"
 
+# git - pushing
 alias gp="git push"
 alias gpu='git push -u origin $(bn)'
 alias gpf="gp --force-with-lease"
 
+# git - pulling
 alias gpl="git pull"
 alias gpr="gpl --rebase"
+alias gpro="gpl --rebase origin"
 
+# git - rebasing
 alias gr="git rebase"
 alias gro="gr --onto"
-alias groa="gr --autosquash --onto"
+alias grao="gr --autosquash --onto"
 alias gri="gr -i"
-alias grin="gr --autosquash -i"
+alias grai="gr --autosquash -i"
 alias gra="gr --abort"
 alias grc="gr --continue"
 
+# git - merging
 alias gm="git merge"
 alias gma="gm --abort"
 alias gmc="gm --continue"
 
+# git - branching & navigation
+alias gb="git branch"
+alias bn="gb | grep '*' | tr -d '* '"
+alias gmb='git merge-base $(bn)'
 alias gch="git checkout"
 alias gsw="git switch"
 alias gswc="gsw -c"
 
-alias gf="git fetch"
-
+# git - log inspection
 alias glo="git log --oneline"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
 alias gla="gl --all"
 
+# git - stash
 alias gst="git stash"
 alias gstu="gst --include-untracked"
 alias gstk="gst --keep-index"
